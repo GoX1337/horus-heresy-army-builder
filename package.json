@@ -1,0 +1,27 @@
+{
+  "name": "horus-heresy-army-builder",
+  "version": "1.0.0",
+  "description": "Horus heresy army builder app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoX1337/horus-heresy-army-builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoX1337/horus-heresy-army-builder/issues"
+  },
+  "homepage": "https://github.com/GoX1337/horus-heresy-army-builder#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "morgan": "^1.10.0"
+  }
+}
