@@ -29,13 +29,13 @@ router.post('/register', async (req, res) => {
 router.post('/token', async (req, res) => {
     let user = await User.findOne({ username: req.body.username });
     if (user && bcrypt.compareSync(String(req.body.password), user.password)) {
-        const token = jwt.sign({ "user": user._id }, process.env.APISECRET, {
+        const token = jwt.sign({ "userId" : user._id }, process.env.APISECRET, {
             expiresIn: 60 * 60 * 24
         });
-        res.status(200).send({ "token": token });
+        res.status(200).send({ "token" : token });
     }
     else {
-        res.status(403).send({"message": 'Forbidden: wrong username/password' });
+        res.status(403).send({"message" : 'Forbidden: wrong username/password' });
     }
 });
 
