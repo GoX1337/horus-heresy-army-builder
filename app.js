@@ -17,7 +17,7 @@ app.use(express.static('dist'));
 app.use(morgan('combined'));
 
 app.use("/auth", authRoute);
-app.use("/api", auth, hhBuilderRoutes);
+app.use("/api/armylist", auth, hhBuilderRoutes);
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}...`);
